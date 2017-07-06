@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main_activity_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:layout_weight="1"/>
+
+    <!--底部导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <!--经典案例按钮-->
+        <LinearLayout
+            android:id="@+id/ll_main_activity_classical_case"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_light"/>
+
+            <ImageView
+                android:id="@+id/iv_main_activity_classical_case"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/selector_classical_case"/>
+
+            <TextView
+                android:id="@+id/tv_main_activity_classical_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_small"
+                android:text="@string/classical_case"/>
+
+        </LinearLayout>
+        <!--经典案例按钮END-->
+
+        <!--占位View-->
+        <!--layout_width需要与AR按钮保持一致-->
+        <View
+            android:layout_width="60dp"
+            android:layout_height="match_parent"/>
+        <!--占位ViewEND-->
+
+        <!--个人中心按钮-->
+        <LinearLayout
+            android:id="@+id/ll_main_activity_user_center"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_light"/>
+
+            <ImageView
+                android:id="@+id/iv_main_activity_user_center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/selector_user_center"/>
+
+            <TextView
+                android:id="@+id/tv_main_activity_user_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/font_small"
+                android:text="@string/user_center"/>
+
+        </LinearLayout>
+        <!--个人中心按钮END-->
+
+    </LinearLayout>
+    <!--底部导航栏END-->
+
+    <!--AR按钮-->
+    <!--layout_width需要与占位View保持一致-->
+    <ImageView
+        android:id="@+id/iv_main_activity_ar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_ar"/>
+    <!--AR按钮END-->
+
+</RelativeLayout>

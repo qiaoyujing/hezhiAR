@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.pili.pldroid.player.widget.PLVideoTextureView
+                android:id="@+id/VideoView"
+                android:layout_width="match_parent"
+                android:layout_height="206dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/iv_pl_video_texture_CoverView"
+                android:layout_width="match_parent"
+                android:layout_height="206dp"
+                android:layout_gravity="center"
+
+                android:src="@drawable/ic_thumbnail" />
+
+            <LinearLayout
+                android:id="@+id/LoadingView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="buffering"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:onClick="onClickBack"
+                    android:background="@color/smssdk_transparent"
+                    android:src="@drawable/ic_left_white" />
+            </LinearLayout>
+
+          <!--  <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="4dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/smssdk_transparent"
+                    android:onClick="onClickSwitchScreen"
+                    android:src="@drawable/ic_open_eye" />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:background="@color/smssdk_transparent"
+                    android:onClick="onClickRotate"
+                    android:src="@drawable/ic_rotate_right" />
+
+
+            </LinearLayout>-->
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_PLVideoTexture_videoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="一个例子"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_middle" />
+
+                <Button
+                    android:id="@+id/btn_PLVideotexture_collect"
+                    android:layout_width="87dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/color_collect_btn"
+                    android:text="@string/collect_btn"
+                    android:textSize="@dimen/font_middle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="2dp"
+                android:background="@color/grey_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+
+                <ImageView
+                    android:id="@+id/iv_plvideo_browse"
+                    android:layout_width="11dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="2dp"
+                    app:srcCompat="@drawable/ic_browse" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="浏览："
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="12dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_plvideoTexture_browseNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="26dp"
+                    android:textSize="@dimen/font_small"
+                    android:text="434次" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="2dp"
+                    android:layout_marginRight="2dp"
+                    app:srcCompat="@drawable/ic_collect" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="收藏："
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="12dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_plvideoTexture_collectNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/font_small"
+                    android:text="34人"
+                    android:layout_marginRight="26dp"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="2dp"
+                    app:srcCompat="@drawable/ic_video_totaltime" />
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="时长： "
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="12dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_plvideoTexture_totalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/font_small"
+                    android:text="56分钟" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/grey_light">
+
+                <TextView
+                    android:id="@+id/tv_plvideoTexture_videoDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="9"
+                    android:textColor="@color/introductionFontColor"
+                    android:padding="18dp"
+                    android:textSize="14dp"
+                    android:text="这是一个孤单的就撒旦法火炬大厦发快递交罚款福建打工哈哈上岛咖啡极大丰富个级的萨芬的发几个案发地方地方jadhgjdafhdsjfhasdjfhaif记大过哈登伽伽的结果你当过那肯定就给你就爱哭给你就撒附加费束带结发发几个拿积分拿到家开发撒发生vavdfdvdbgjfaihvoaidfhvod" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</FrameLayout>

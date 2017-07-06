@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_classical_case_kezhi_site"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_middle"
+            android:text="@string/kezhi_site"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_classical_case"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tabGravity="center"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/grey_light"
+            app:tabTextAppearance="@style/ClassicalCaseTabLayoutTextStyle"
+            app:tabIndicatorColor="@color/white"
+            app:tabBackground="@color/green"/>
+
+        <ImageView
+            android:id="@+id/iv_classical_case_all_channel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:background="@color/green"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_classical_case_more_channel"/>
+
+    </LinearLayout>
+    <!--导航栏END-->
+
+    <!--内容页-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_classical_case"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"/>
+    <!--内容页END-->
+
+</LinearLayout>

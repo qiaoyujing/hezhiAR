@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_version_info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/green"
+        app:navigationIcon="@drawable/ic_left_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/version_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_middle"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/iv_version_info_app_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/tb_version_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tv_version_info_version_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_version_info_app_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/font_middle"
+        android:text="科智AR 1.0"
+        android:textSize="@dimen/font_middle"
+        android:textColor="@color/grey_dark"/>
+
+    <TextView
+        android:id="@+id/tv_version_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_version_info_version_name"
+        android:layout_marginTop="@dimen/spacing_huge"
+        android:paddingLeft="@dimen/spacing_huge"
+        android:paddingRight="@dimen/spacing_huge"
+        android:text="VersionInfo，版本信息，版本信息内容。本信息内容。VersionInfo，版本信息，版onInfo，版本信息，版本信息Info，版本信息，版本信容。Versi本信息，版本信息内容。Versi内容。VersionInfo，版，容。VersionInfo，版本信息，版VeionInf版本信息内容。Vo，版本信息，版息内容。VersionInfo，版本信息，版容。息内容。VersionInfo，版本信息，版容。息内容。VersionInfo，版本信息，版容。息内容。VersionInfo，版本信息，版容。"
+        android:textSize="@dimen/font_middle"
+        android:textColor="@color/grey_dark"/>
+
+    <TextView
+        android:id="@+id/tv_version_info_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_version_info_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/spacing_huge"
+        android:paddingLeft="@dimen/spacing_huge"
+        android:paddingRight="@dimen/spacing_huge"
+        android:text="@string/update_now"
+        android:textSize="@dimen/font_middle"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_version_info_update"/>
+
+    <TextView
+        android:id="@+id/tv_version_info_licence_2_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/spacing_small"
+        android:text="@string/licence_2_line"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/grey_dark"/>
+
+    <TextView
+        android:id="@+id/tv_version_info_licence_1_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_version_info_licence_2_line"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/spacing_tiny"
+        android:text="@string/licence_1_line"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/grey_dark"/>
+
+</RelativeLayout>

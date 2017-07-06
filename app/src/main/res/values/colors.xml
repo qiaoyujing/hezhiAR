@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 灰色系 -->
+    <!-- gray scale -->
+    <color name="white">#FAFAFA</color>
+    <color name="grey_light">#E0E0E0</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="grey_dark">#616161</color>
+    <color name="black">#212121</color>
+
+    <!-- 基础色 -->
+    <!-- basic colors -->
+    <color name="green_light">#71dfcb</color>
+    <color name="green">#4ed8bd</color>
+
+
+    <!--特殊颜色-->
+    <color name="user_center_background">#EEEEEE</color>
+    <color name="btn_pressed">#FF148C74</color>
+    <color name="view_line">#cccccc</color>
+    <color name="introductionFontColor">#6A6666</color>
+    <color name="caseBackgroundColor">#F5F5F5</color>
+
+    <!--视频控制器-->
+    <color name="transparent">#00000000</color>
+    <color name="mediacontroller_bg_pressed">#53c1bd</color>
+    <color name="mediacontroller_bg">#99000000</color>
+
+</resources>
